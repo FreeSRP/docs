@@ -14,6 +14,7 @@ FreeSRP documentation
    getting-started
    freesrp-gnuradio
    baudline 
+   sources
 
 
 Indices and tables
