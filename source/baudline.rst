@@ -3,13 +3,15 @@ Using the FreeSRP with Baudline
 
 `freesrp-io` is a command-line utility that can be used to read from a file and transmit the read samples or receive and write the raw samples to a file. It also supports output to `stdout`, so it can be used in Unix pipes. This is extremely powerful, because it will allow you to pipe the data from `freesrp-io` into any other program that accepts data on its standard input, `stdin`.
 
-Baudline is "a time-frequency browser designed for scientific visualization of the spectral domain", as described on [its website](http://www.baudline.com/what_is_baudline.html). It supports input over `stdin`, so it can be used in a pipe with `freesrp-io`.
+Baudline is "a time-frequency browser designed for scientific visualization of the spectral domain", as described on `its website <http://www.baudline.com/what_is_baudline.html>`_. It supports input over `stdin`, so it can be used in a pipe with `freesrp-io`.
 
 Once you have downloaded Baudline, it is very easy to use it with the FreeSRP and start streaming samples into it. Everything can be done in this one command:
 
-```
-freesrp-io -f100e6 -b10e6 -g15 -o- | baudline -stdin -channels 2 -quadrature -format le16 -samplerate 10000000
-```
+.. code-block:: bash
+    
+    freesrp-io -f100e6 -b10e6 -g15 -o- | baudline -stdin -channels 2 -quadrature -format le16 -samplerate 10000000
+
+
 
 There are a couple of arguments to both `freesrp-io` and `baudline`.
 
